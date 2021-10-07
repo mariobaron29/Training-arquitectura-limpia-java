@@ -15,9 +15,11 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 public class Router {
     @Bean
     public RouterFunction<ServerResponse> routerFunction(Handler handler) {
-        return route(RequestPredicates.GET("/api/person/{id}")
-                , handler::getPerson)
-        .andRoute(GET("/api/balance/{id}"), handler::getBalance);
+        return route(RequestPredicates.GET("/api/person/{id}"), handler::getPerson)
+        .andRoute(GET("/api/balance/{id}"), handler::getBalance)
+        .andRoute(GET("/api/people"), handler::getPeople)
+        .andRoute(GET("/api/person/{id}"), handler::getPersonById)
+        .andRoute(POST("/api/savePerson"), handler::savePerson);
 
         }
 }

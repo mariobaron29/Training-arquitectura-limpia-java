@@ -6,5 +6,6 @@ import lombok.Data;
 @Builder(toBuilder = true)
 public class Person {
     private String id;
+    private String name;
     private Float balance;
 }

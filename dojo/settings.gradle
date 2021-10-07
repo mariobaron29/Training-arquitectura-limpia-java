@@ -10,3 +10,5 @@ include ':reactive-web'
 project(':reactive-web').projectDir = file('./infrastructure/entry-points/reactive-web')
 include ':bancolombia-service'
 project(':bancolombia-service').projectDir = file('./infrastructure/driven-adapters/bancolombia-service')
+include ':mongo-repository'
+project(':mongo-repository').projectDir = file('./infrastructure/driven-adapters/mongo-repository')
